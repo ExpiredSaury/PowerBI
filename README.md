@@ -141,3 +141,12 @@ CALCULATE + FILTER + VALUES
 CALCULATE([产品小类数量],FILTER(VALUES('产品表'[产品小类]),[销售数量]>2000))
 ```
 
+## PowerBI
+
+**DAX公式新建表**
+
+```python
+汇总表 = SUMMARIZE('订单表','地区表'[区域],'产品表'[产品大类],"销售数量",SUM('订单表'[数量]),"销售金额",SUM('订单表'[金额]),"利润金额",SUM('订单表'[利润])) 
+```
+
+![image-20230303170913288](https://gitee.com/zh_sng/cartographic-bed/raw/master/img/image-20230303170913288.png)
